@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,7 +30,6 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-
     
      <div class="container">
         @foreach($articles as $a) 
@@ -39,7 +37,7 @@
             <div class="col-sm-6 col-sm-offset-3">
                 <h2>{{ $a->title }}</h2>
                 <p>{{ $a->content }}</p>
-                <p><a href="#">Read more!</a></p>
+                <p><a href="{{ route('article.show', $a->id) }}">Read more!</a></p>
             </div>
         </div>
         @endforeach
